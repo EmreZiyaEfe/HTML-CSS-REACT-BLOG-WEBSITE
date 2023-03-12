@@ -16,6 +16,7 @@ function SideBar() {
             <li className="sidebarListItem">Spor</li>
             <li className="sidebarListItem">Teknoloji</li>
             <li className="sidebarListItem">Tarih</li>
+            <li className="sidebarListItem">Bilim</li>
         </ul>
         </div>
         <div className="sidebarItem">
