@@ -1,0 +1,55 @@
+.register {
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+        ), 
+        url("https://img.freepik.com/free-photo/aerial-view-woman-reading-newspaper-computer-laptop-wooden-table_53876-24820.jpg?w=826&t=st=1681338069~exp=1681338669~hmac=f85d090f9d11dd8eedb70c8ffed6f62b10685a6ff0b7128db4cbeeb9e99e94ba");
+    background-size: cover;
+}
+
+.registerTitle {
+    font-size: 50px;
+}
+
+.registerForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.registerForm label {
+    margin: 10px 0;
+}
+
+.registerInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+}
+
+.registerButton {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: teal;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.registerLoginButton {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: lightcoral;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
