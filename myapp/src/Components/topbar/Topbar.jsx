@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
 import "./topbar.css"
 
 function Topbar() {
+
+    const user = false;
+
   return (
     <div className='top'>
         <div className="topLeft">
@@ -11,19 +15,43 @@ function Topbar() {
         </div>
         <div className="topCenter">
             <ul className="topList">
-                <li className="topListItem">ANA SAYFA</li>
-                <li className="topListItem">HAKKIMIZDA</li>
-                <li className="topListItem">İLETİŞİM</li>
-                <li className="topListItem">YAZ</li>
-                <li className="topListItem">ÇIKIŞ YAP</li>
+                <li className="topListItem">
+                    <Link className="link" to="/">ANA SAYFA</Link>
+                </li>
+                <li className="topListItem">
+                    <Link className="link" to="/about">HAKKIMIZDA</Link>
+                </li>
+                <li className="topListItem">
+                    <Link className="link" to="/contact">İLETİŞİM</Link>
+                </li>
+                <li className="topListItem">
+                    <Link className="link" to="/write">YAZ</Link>
+                </li>
+                <li className="topListItem">
+                    {user && "ÇIKIŞ YAP"}
+                </li>
             </ul>
         </div>
         <div className="topRight">
+            {
+                user ? (
             <img className="topImage" src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+
+                ) : (
+                    <ul className="topList">
+                        <li className="topListItem">
+                            <Link className="link" to="/login">GİRİŞ YAP</Link>
+                        </li>
+                        <li className="topListItem">
+                            <Link className="link" to="/register">KAYIT OL</Link>
+                        </li>
+                    </ul>
+                )
+            }
             <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
         </div>
     </div>
-  )
+  );
 }
 
 export default Topbar

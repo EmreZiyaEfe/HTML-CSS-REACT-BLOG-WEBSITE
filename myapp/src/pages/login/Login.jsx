@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./login.css"
 
 function Login() {
@@ -12,7 +13,9 @@ function Login() {
             <button className="loginButton">Giriş Yap</button>
         </form>
         
-        <button className="loginRegisterButton">Kayıt Ol</button>
+        <button className="loginRegisterButton">
+          <Link className="link" to="/register">Kayıt Ol</Link>
+        </button>
 
     </div>
   )

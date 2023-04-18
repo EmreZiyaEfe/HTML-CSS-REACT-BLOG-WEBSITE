@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./register.css"
 
 function Register() {
@@ -14,7 +15,9 @@ function Register() {
             <button className="registerButton">Kayıt Ol</button>
         </form>
         
-        <button className="registerLoginButton">Giriş</button>
+        <button className="registerLoginButton">
+          <Link className="link" to="/login">Giriş Yap</Link>
+        </button>
 
     </div>
   )
